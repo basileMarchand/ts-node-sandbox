@@ -23,6 +23,7 @@ jobs:
       - name: Start Redis
         uses: supercharge/redis-github-action@1.5.0
         with:
+          redis-image: redis-stack-server
           redis-version: "6"
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
