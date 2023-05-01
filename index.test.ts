@@ -7,8 +7,10 @@ import {
 
 const REDIS_PREFIX = "TEST_";
 
+// 172.17.0.2
+
 let client: RedisClientType = createClient({
-  url: "redis://172.17.0.2:6379",
+  url: "redis://localhost:6379",
 });
 
 let sessionController: SessionController;
