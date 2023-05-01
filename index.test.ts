@@ -1,3 +1,5 @@
+import * as dotenv from "dotenv";
+dotenv.config();
 import { RedisClientType, createClient } from "redis";
 import {
   SessionType,
@@ -5,12 +7,16 @@ import {
   SessionController,
 } from "./src/session_controller";
 
+const REDIS_HOST: string = process.env["REDIS_HOST"]
+  ? process.env["REDIS_HOST"]
+  : "localhost";
+
 const REDIS_PREFIX = "TEST_";
 
 // 172.17.0.2
 
 let client: RedisClientType = createClient({
-  url: "redis://localhost:6379",
+  url: `redis://${REDIS_HOST}:6379`,
 });
 
 let sessionController: SessionController;
