@@ -1,5 +1,7 @@
 # Sandbox
 
+![workflow status](https://github.com/basileMarchand/ts-node-sandbox/actions/workflows/node.js.yml/badge.svg)
+
 My personnal sandbox to experiment with node/typescript/...
 
 ## Redis
